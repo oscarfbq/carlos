@@ -1,258 +1,513 @@
 // =================================================================
+
 // (NUEVO) MINI BASE DE DATOS DE PRODUCTOS
+
 // =================================================================
+
 // ¡AQUÍ ES DONDE AÑADIRÁS TODOS TUS PRODUCTOS!
+
 // Solo copia y pega un bloque { ... }, y cambia los datos.
+
 // Asegúrate de poner la URL correcta de tu imagen.
+
 // =================================================================
+
 const baseDeDatos = {
+
     fruteria: [
+
         { 
+
             nombre: 'Aguacate', 
+
             precio: 35.00, 
+
             img: 'frutas/aguacate.jpg' 
-        },
-        { 
-            nombre: 'Albahaca', 
-            precio: 18.00, 
-            img: 'frutas/albhaca.jpg' 
-        },
-        { 
-            nombre: 'Apio', 
-            precio: 22.00, 
-            img: 'frutas/apio.jpg' 
-        },
-        { 
-            nombre: 'Ajo', 
-            precio: 22.00, 
-            img: 'frutas/ajo.jpg' 
-        },
-        { 
-            nombre: 'Brocoli', 
-            precio: 22.00, 
-            img: 'frutas/brocoli.jpg' 
+
         },
 
+        { 
+
+            nombre: 'Albahaca', 
+
+            precio: 18.00, 
+
+            img: 'frutas/albhaca.jpg' 
+
+        },
+
+        { 
+
+            nombre: 'Apio', 
+
+            precio: 22.00, 
+
+            img: 'frutas/apio.jpg' 
+
+        },
+
+        { 
+
+            nombre: 'Ajo', 
+
+            precio: 22.00, 
+
+            img: 'frutas/ajo.jpg' 
+
+        },
+
+        { 
+
+            nombre: 'Brocoli', 
+
+            precio: 22.00, 
+
+            img: 'frutas/brocoli.jpg' 
+
+        },
+
+
+
          { 
+
             nombre: 'Calabaza italiana', 
+
             precio: 22.00, 
+
             img: 'frutas/calabazaitaliana.jpg' 
+
         },
+
         { 
+
             nombre: 'cebolla.jpg', 
+
             precio: 22.00, 
+
             img: 'frutas/cebolla.jpg' 
+
         },
+
         { 
+
             nombre: 'Cebolla blanca grande', 
+
             precio: 22.00, 
+
             img: 'frutas/cebolla.jpg' 
+
         },
+
         { 
+
             nombre: 'Cebolla blanca mediana', 
+
             precio: 22.00, 
+
             img: 'frutas/cebolla.jpg' 
+
         },
+
         { 
+
             nombre: 'Cebolla cambray', 
+
             precio: 22.00, 
+
             img: 'frutas/cebollacambray.jpg' 
+
         },
+
         { 
+
             nombre: 'Cebolla morada', 
+
             precio: 22.00, 
+
             img: 'frutas/cebollamorada.jpg' 
+
         },
+
         { 
+
             nombre: 'Champiñón', 
+
             precio: 22.00, 
+
             img: 'frutas/champinon.jpg' 
+
         },
+
         { 
+
             nombre: 'Chayote', 
+
             precio: 22.00, 
+
             img: 'frutas/chayote.jpg' 
+
         },
+
         { 
+
             nombre: 'Chile de árbol', 
+
             precio: 22.00, 
+
             img: 'frutas/chiledearbol.jpg' 
+
         },
+
         { 
+
             nombre: 'Chile guajillo', 
+
             precio: 22.00, 
+
             img: 'frutas/chileguajillo.jpg' 
+
         },
+
         { 
+
             nombre: 'Chile habanero', 
+
             precio: 22.00, 
+
             img: 'frutas/habanero.jpg' 
+
         },
+
         { 
+
             nombre: 'Chile jalapeño', 
+
             precio: 22.00, 
+
             img: 'frutas/chilejalapeno.jpg' 
+
         },
+
         { 
+
             nombre: 'Chile morita', 
+
             precio: 22.00, 
+
             img: 'frutas/chilemorita.jpg' 
+
         },
+
         { 
+
             nombre: 'Chile puya', 
+
             precio: 22.00, 
+
             img: 'frutas/chilepuya.jpg' 
+
         },
+
         { 
+
             nombre: 'Chileserrano verde', 
+
             precio: 22.00, 
+
             img: 'frutas/chileserrano.jpg' 
+
         },
+
         { 
+
             nombre: 'Cilantro', 
+
             precio: 22.00, 
+
             img: 'frutas/cilantro.jpg' 
+
         },
+
         { 
+
             nombre: 'Col blanca', 
+
             precio: 22.00, 
+
             img: 'frutas/colblanca.jpg' 
+
         },
+
         { 
+
             nombre: 'Col morada', 
+
             precio: 22.00, 
+
             img: 'frutas/colmorada.jpg' 
+
         },
+
         { 
+
             nombre: 'Coliflor', 
+
             precio: 22.00, 
+
             img: 'frutas/coliflor.jpg' 
+
         },
+
         { 
+
             nombre: 'Fresa', 
+
             precio: 22.00, 
+
             img: 'frutas/fresa.jpg' 
+
         },
+
         { 
+
             nombre: 'Hierbabuena', 
+
             precio: 22.00, 
+
             img: 'frutas/hierbabuena.jpg' 
+
         },
+
         { 
+
             nombre: 'Jícama', 
+
             precio: 22.00, 
+
             img: 'frutas/jicama' 
+
         },
+
         { 
+
             nombre: 'Jitomate bola', 
+
             precio: 22.00, 
+
             img: 'frutas/jitomatebola.jpg' 
+
         },
+
         { 
+
             nombre: 'Jitomate primera', 
+
             precio: 22.00, 
+
             img: 'frutas/jitomatepri mera.jpg' 
+
         },
+
         { 
+
             nombre: 'Jitomate segunda', 
+
             precio: 22.00, 
+
             img: 'frutas/jitomate segunda.jpg' 
+
         },
+
         { 
+
             nombre: 'Lechuga bola', 
+
             precio: 22.00, 
+
             img: 'frutas/lechugabola.jpg' 
+
         },
+
         { 
+
             nombre: 'Lechugas finas', 
+
             precio: 22.00, 
+
             img: 'frutas/lechuga finas.jpg' 
+
         },
+
         { 
+
             nombre: 'Limón agrio grande', 
+
             precio: 22.00, 
+
             img: 'frutas/limon con semilla.jpg' 
+
         },
+
         { 
+
             nombre: 'Limón agrio mediano', 
+
             precio: 22.00, 
+
             img: 'frutas/limonconsemilla.jpg' 
+
         },
+
         { 
+
             nombre: 'Limón sin semilla', 
+
             precio: 22.00, 
+
             img: 'frutas/limon sinse milla.jpg' 
+
      
+
         },
+
         { 
+
             nombre: 'Manzana golden', 
+
             precio: 22.00, 
+
             img: 'frutas/manzana goolden.jpg' 
+
         },
+
         { 
+
             nombre: 'Naranja amarilla', 
+
             precio: 22.00, 
+
             img: 'frutas/naranja amarilla.jpg' 
+
         },
+
         { 
+
             nombre: 'Naranja verde', 
+
             precio: 22.00, 
+
             img: 'frutas/naranja verde.jpg' 
+
         },
+
         { 
+
             nombre: 'Papa blanca', 
+
             precio: 22.00, 
+
             img: 'frutas/papablanca.jpg' 
+
         },
+
         { 
+
             nombre: 'Pepinillo', 
+
             precio: 22.00, 
+
             img: 'frutas/pepinillos.jpg' 
+
         },
+
         { 
+
             nombre: 'Pepino', 
+
             precio: 22.00, 
+
             img: 'frutas/pepino.jpg' 
+
         },
+
         { 
+
             nombre: 'Pera', 
+
             precio: 22.00, 
+
             img: 'frutas/pera.jpg' 
+
         },
+
         { 
+
             nombre: 'Pimiento morrón', 
+
             precio: 22.00, 
+
             img: 'frutas/morron.jpg' 
+
         },
+
         { 
+
             nombre: 'Poro', 
+
             precio: 22.00, 
+
             img: 'frutas/poro.jpg' 
+
         },
+
         { 
+
             nombre: 'Rábanos', 
+
             precio: 22.00, 
+
             img: 'frutas/rabanos.jpg' 
+
         },
+
         { 
+
             nombre: 'Sandía personal', 
+
             precio: 22.00, 
+
             img: 'frutas/sandiapersonal.jpg' 
+
         },
+
         { 
+
             nombre: 'Tomate', 
+
             precio: 22.00, 
+
             img: 'frutas/tomate.jpg' 
+
         },
+
         { 
+
             nombre: 'Uva verde sin semilla', 
+
             precio: 22.00, 
+
             img: 'frutas/uva verde.jpg' 
+
         },
+
         { 
+
             nombre: 'Zanahoria', 
+
             precio: 22.00, 
+
             img: 'frutas/zanahoria.jpg' 
+
         },
         
         // ... Puedes añadir 50 productos más aquí ...
@@ -269,23 +524,9 @@ const baseDeDatos = {
         //     precio: 190.00, 
         //     img: 'https://url-de-tu-bistec.jpg' 
         // },
-       { 
-            nombre: 'Aguacate', 
-            precio: 35.00, 
-            img: 'frutas/aguacate.jpg' 
-        },
-        { 
-            nombre: 'Albahaca', 
-            precio: 18.00, 
-            img: 'frutas/albhaca.jpg' 
-        },
-        { 
-            nombre: 'Apio', 
-            precio: 22.00, 
-            img: 'frutas/apio.jpg' 
-        },
     ]
 };
+
 
 
 // =================================================================
@@ -363,7 +604,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Le decimos que cargue la lista 'fruteria' en el grid 'grid-fruteria'
     cargarProductos(baseDeDatos.fruteria, 'grid-fruteria');
     // (En el futuro, cargarías los otros departamentos)
-     cargarProductos(baseDeDatos.carniceria, 'grid-carniceria');
+    // cargarProductos(baseDeDatos.carniceria, 'grid-carniceria');
 
 
     // --- FUNCIONES DEL CARRITO ---
@@ -380,7 +621,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // (Aquí necesitarás añadir listeners para los otros grids en el futuro)
     // document.getElementById('grid-carniceria').addEventListener('click', manejarClicFruteria);
-      document.getElementById('grid-carniceria').addEventListener('click', manejarClicFruteria);
+
 
     function gestionarKilos(boton) {
         const card = boton.closest('.producto-card');
@@ -534,10 +775,6 @@ document.addEventListener('DOMContentLoaded', () => {
     checkFactura.addEventListener('change', toggleCamposFactura);
 
 });
-
-
-
-
 
 
 
