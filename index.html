@@ -33,15 +33,32 @@
                     <a href="#departamentos" class="btn-volver">← Volver</a>
                     <h2>Frutas por Kilo</h2>
                 </div>
-                
                 <div class="grid-productos" id="grid-fruteria">
                     </div>
-                
                 <p class="nota">🚨 *NOTA IMPORTANTE:* ALV CON EL PERICO PERRO BORACHO TE DICE EL GORDO</p>
+            </section>
+
+            <section id="Carniceria" class="pagina">
+                <div class="header-productos">
+                    <a href="#departamentos" class="btn-volver">← Volver</a>
+                    <h2>Carnicería</h2>
+                </div>
+                <div class="grid-productos" id="grid-carniceria">
+                    </div>
+            </section>
+
+            <section id="semillas" class="pagina">
+                <div class="header-productos">
+                    <a href="#departamentos" class="btn-volver">← Volver</a>
+                    <h2>Semillas y Secos</h2>
+                </div>
+                <div class="grid-productos" id="grid-semillas">
+                    </div>
             </section>
 
             <section id="departamentos" class="pagina">
                 <h2>Nuestros Departamentos</h2>
+                
                 <div class="grid-departamentos">
                     
                     <a href="#fruteria" class="departamento-card">
@@ -49,15 +66,16 @@
                         <h3>FRUTERÍA</h3>
                     </a>
                     
-                    <a href="#" class="departamento-card"> 
+                    <a href="#Carniceria" class="departamento-card"> 
                         <img src="carniceria.jpg" alt="Carnicería">
                         <h3>CARNICERÍA</h3>
                     </a>
-                    <a href="#" class="departamento-card">
-                        <img src="semillas y secos.jpg" alt="Pollería">
+                    
+                    <a href="#semillas" class="departamento-card">
+                        <img src="semillas y secos.jpg" alt="Semillas y Secos">
                         <h3>SEMILLAS Y SECOS</h3>
                     </a>
-                    
+                
                 </div>
             </section>
             
@@ -77,7 +95,7 @@
             <a href="#" class="modal-cerrar">×</a>
             <h2>Tu Pedido</h2>
             <ul id="lista-carrito">
-                </ul>
+            </ul>
             <h3 id="total-pedido">Total: $0.00</h3>
             <hr>
             <form id="formulario-pedido">
@@ -92,21 +110,6 @@
                 <label for="cliente-direccion">Dirección de Entrega:</label>
                 <textarea id="cliente-direccion" placeholder="Calle, número, colonia, referencias" required></textarea>
                 
-                <hr> 
-                <div class="factura-toggle">
-                    <input type="checkbox" id="requiere-factura">
-                    <label for="requiere-factura">¿Requieres factura?</label>
-                </div>
-                <div id="datos-factura" class="campos-ocultos">
-                    <label for="cliente-rfc">Tu RFC:</label>
-                    <input type="text" id="cliente-rfc" placeholder="RFC con homoclave">
-                    
-                    <label fo r="cliente-razon-social">Razón Social (Nombre):</label>
-                    <input type="text" id="cliente-razon-social" placeholder="Nombre completo o Razón Social">
-                    
-                    <label for="cliente-uso-cfdi">Uso de CFDI:</label>
-                    <input type="text" id="cliente-uso-cfdi" placeholder="Ej: G03 - Gastos en general" value="G03 - Gastos en general">
-                </div>
                 <button type="button" id="enviar-whatsapp" class="btn-compra">
                     Hacer Pedido por WhatsApp
                 </button>
@@ -117,4 +120,3 @@
     <script src="opp.js"></script>
 </body>
 </html>
-
