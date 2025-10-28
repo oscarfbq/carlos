@@ -584,7 +584,7 @@ const baseDeDatos = {
         { 
             nombre: 'Choco nubis', 
             precio: 89.00, 
-            img: 'semillas y secos/choco nubis.jpeg' 
+            img: 'semillas y secos/choconubis.webp' 
         },
         { 
             nombre: 'Coco rallado', 
@@ -891,6 +891,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Listener de Factura eliminado
 
 });
+
 
 
 
