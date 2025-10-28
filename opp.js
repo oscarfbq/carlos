@@ -531,9 +531,110 @@ const baseDeDatos = {
     ],
     semillas: [
         { 
-            nombre: 'Nuez de la India', 
-            precio: 220.00, 
-            img: 'ruta/nuez.jpg' 
+            nombre: 'Almendra entera', 
+            precio: .00, 
+            img: 'semillas y secos/almendra entera.jpeg' 
+        },
+
+        { 
+            nombre: 'Almendra fileteada', 
+            precio: .00, 
+            img: 'semillas y secos/almendra filetiada.png' 
+        },
+        { 
+            nombre: 'Alpiste', 
+            precio: .00, 
+            img: 'semillas y secos/alpiste.jpeg' 
+        },
+        { 
+            nombre: 'Arina de trigo', 
+            precio: .00, 
+            img: 'semillas y secos/arina de trigo.webp' 
+        },
+        { 
+            nombre: 'Arros paisa', 
+            precio: .00, 
+            img: 'semillas y secos/arros paisa.webp' 
+        },
+        { 
+            nombre: 'Arros zaman', 
+            precio: .00, 
+            img: 'semillas y secos/arroz zaman.jpg' 
+        },
+        { 
+            nombre: 'Azucar', 
+            precio: .00, 
+            img: 'semillas y secos/azucar.png' 
+        },
+        { 
+            nombre: 'Azucaradas', 
+            precio: .00, 
+            img: 'semillas y secos/azucaradas.webp' 
+        },
+        { 
+            nombre: 'Camaron sin cabeza ', 
+            precio: .00, 
+            img: 'semillas y secos/camaron sin cabeza.jpg' 
+        },
+        { 
+            nombre: 'Casta braba', 
+            precio: .00, 
+            img: 'semillas y secos/casta brava.jpeg' 
+        },
+        { 
+            nombre: 'Choco nubis', 
+            precio: .00, 
+            img: 'semillas y secos/choco nubis.jpeg' 
+        },
+        { 
+            nombre: 'Coco rallado', 
+            precio: .00, 
+            img: 'semillas y secos/coco rallado.jpg' 
+        },
+        { 
+            nombre: 'Cueritos rayados', 
+            precio: .00, 
+            img: 'semillas y secos/cueritos rayados.webp' 
+        },
+        { 
+            nombre: 'Cueritos enteros', 
+            precio: .00, 
+            img: 'semillas y secos/cueritos enteros.webp' 
+        },
+        { 
+            nombre: 'Frijol de junio', 
+            precio: .00, 
+            img: 'semillas y secos/frijol de junio.png' 
+        },
+        { 
+            nombre: 'Frijol peruano', 
+            precio: .00, 
+            img: 'semillas y secos/frijpl peruano.jpg' 
+        },
+        { 
+            nombre: 'Maiz palomero', 
+            precio: .00, 
+            img: 'semillas y secos/maiz palomero.webp' 
+        },
+        { 
+            nombre: 'Pechuga fileteada', 
+            precio: .00, 
+            img: 'semillas y secos/pechuga filetiada.jpg' 
+        },
+        { 
+            nombre: 'Sal de grano', 
+            precio: .00, 
+            img: 'semillas y secos/sal de grano.jpeg' 
+        },
+        { 
+            nombre: 'Sal', 
+            precio: .00, 
+            img: 'semillas y secos/sal.webp' 
+        },
+        { 
+            nombre: 'Tamarindo', 
+            precio: .00, 
+            img: 'semillas y secos/tamarindo.jpeg' 
         },
         
         
@@ -794,6 +895,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Listener de Factura eliminado
 
 });
+
 
 
 
