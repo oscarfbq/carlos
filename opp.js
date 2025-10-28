@@ -353,7 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Le decimos que cargue la lista 'fruteria' en el grid 'grid-fruteria'
     cargarProductos(baseDeDatos.fruteria, 'grid-fruteria');
     // (En el futuro, cargarías los otros departamentos)
-    // cargarProductos(baseDeDatos.carniceria, 'grid-carniceria');
+     cargarProductos(baseDeDatos.carniceria, 'grid-carniceria');
 
 
     // --- FUNCIONES DEL CARRITO ---
@@ -524,6 +524,7 @@ document.addEventListener('DOMContentLoaded', () => {
     checkFactura.addEventListener('change', toggleCamposFactura);
 
 });
+
 
 
 
