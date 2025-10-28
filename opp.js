@@ -101,7 +101,7 @@ const baseDeDatos = {
 
             precio: 35.00, 
 
-            img: 'frutas/cebollacambray.jpg' 
+            img: 'frutas/cebolla cambray.jpg' 
 
         },
 
@@ -111,7 +111,7 @@ const baseDeDatos = {
 
             precio: 25.00, 
 
-            img: 'frutas/cebollamorada.jpg' 
+            img: 'frutas/cebolla morada.jpg' 
 
         },
 
@@ -141,7 +141,7 @@ const baseDeDatos = {
 
             precio: 129.00, 
 
-            img: 'frutas/chiledearbol.jpg' 
+            img: 'frutas/chile de arbol.jpg' 
 
         },
 
@@ -171,7 +171,7 @@ const baseDeDatos = {
 
             precio: 35.00, 
 
-            img: 'frutas/chilejalapeno.jpg' 
+            img: 'frutas/chile jalapeno.jpg' 
 
         },
 
@@ -271,7 +271,7 @@ const baseDeDatos = {
 
             precio: 19.50, 
 
-            img: 'frutas/jicama' 
+            img: 'frutas/jicama.jpg' 
 
         },
 
@@ -281,7 +281,7 @@ const baseDeDatos = {
 
             precio: 37.00, 
 
-            img: 'frutas/jitomatebola.jpg' 
+            img: 'frutas/jitomate bola.jpg' 
 
         },
 
@@ -291,7 +291,7 @@ const baseDeDatos = {
 
             precio: 18.50, 
 
-            img: 'frutas/jitomatepri mera.jpg' 
+            img: 'frutas/jitomate primera.jpg' 
 
         },
 
@@ -331,7 +331,7 @@ const baseDeDatos = {
 
             precio: 25.00, 
 
-            img: 'frutas/limon con semilla.jpg' 
+            img: 'frutas/limonagriogrande.jpg' 
 
         },
 
@@ -341,7 +341,7 @@ const baseDeDatos = {
 
             precio: 21.00, 
 
-            img: 'frutas/limonconsemilla.jpg' 
+            img: 'frutas/limonagriomediano.jpg' 
 
         },
 
@@ -351,7 +351,7 @@ const baseDeDatos = {
 
             precio: 18.50, 
 
-            img: 'frutas/limon sinse milla.jpg' 
+            img: 'frutas/limon sin semilla.jpg' 
 
      
 
@@ -363,7 +363,7 @@ const baseDeDatos = {
 
             precio: 44.80, 
 
-            img: 'frutas/manzana goolden.jpg' 
+            img: 'frutas/manzanagoolden.jpg' 
 
         },
 
@@ -794,4 +794,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Listener de Factura eliminado
 
 });
+
 
