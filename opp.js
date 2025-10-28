@@ -10,7 +10,7 @@ const baseDeDatos = {
         { 
             nombre: 'Aguacate', 
             precio: 35.00, 
-            img: 'frutas/Aguacate.jpg' 
+            img: '/frutas/Aguacate.jpg' 
         },
         { 
             nombre: 'Albahaca', 
@@ -519,5 +519,6 @@ document.addEventListener('DOMContentLoaded', () => {
     checkFactura.addEventListener('change', toggleCamposFactura);
 
 });
+
 
 
