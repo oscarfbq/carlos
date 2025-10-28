@@ -363,7 +363,7 @@ const baseDeDatos = {
 
             precio: 44.80, 
 
-            img: 'frutas/manzanagoolden.jpg' 
+            img: 'frutas/manzanagolden.jpg' 
 
         },
 
@@ -794,6 +794,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Listener de Factura eliminado
 
 });
+
 
 
 
