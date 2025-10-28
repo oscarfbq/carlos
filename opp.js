@@ -269,6 +269,11 @@ const baseDeDatos = {
         //     precio: 190.00, 
         //     img: 'https://url-de-tu-bistec.jpg' 
         // },
+        { 
+            nombre: 'Bistec de Res', 
+            precio: 190.00, 
+            img: 'https://url-de-tu-bistec.jpg' 
+         },
     ]
 };
 
@@ -519,6 +524,7 @@ document.addEventListener('DOMContentLoaded', () => {
     checkFactura.addEventListener('change', toggleCamposFactura);
 
 });
+
 
 
 
