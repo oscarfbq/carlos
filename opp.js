@@ -20,7 +20,7 @@ const baseDeDatos = {
 
             nombre: 'Aguacate', 
 
-            precio: 35.00, 
+            precio: 59.00, 
 
             img: 'frutas/aguacate.jpg' 
 
@@ -30,7 +30,7 @@ const baseDeDatos = {
 
             nombre: 'Albahaca', 
 
-            precio: 18.00, 
+            precio: 49.00, 
 
             img: 'frutas/albhaca.jpg' 
 
@@ -40,7 +40,7 @@ const baseDeDatos = {
 
             nombre: 'Apio', 
 
-            precio: 22.00, 
+            precio: 39.50, 
 
             img: 'frutas/apio.jpg' 
 
@@ -50,7 +50,7 @@ const baseDeDatos = {
 
             nombre: 'Ajo', 
 
-            precio: 22.00, 
+            precio: 149.00, 
 
             img: 'frutas/ajo.jpg' 
 
@@ -60,7 +60,7 @@ const baseDeDatos = {
 
             nombre: 'Brocoli', 
 
-            precio: 22.00, 
+            precio: 36.00, 
 
             img: 'frutas/brocoli.jpg' 
 
@@ -72,7 +72,7 @@ const baseDeDatos = {
 
             nombre: 'Calabaza italiana', 
 
-            precio: 22.00, 
+            precio: 18.00, 
 
             img: 'frutas/calabazaitaliana.jpg' 
 
@@ -82,7 +82,7 @@ const baseDeDatos = {
 
             nombre: 'cebolla.jpg', 
 
-            precio: 22.00, 
+            precio: 17.00, 
 
             img: 'frutas/cebolla.jpg' 
 
@@ -92,7 +92,7 @@ const baseDeDatos = {
 
             nombre: 'Cebolla blanca grande', 
 
-            precio: 22.00, 
+            precio: 22.50, 
 
             img: 'frutas/cebolla.jpg' 
 
@@ -102,7 +102,7 @@ const baseDeDatos = {
 
             nombre: 'Cebolla blanca mediana', 
 
-            precio: 22.00, 
+            precio: 27.00, 
 
             img: 'frutas/cebolla.jpg' 
 
@@ -112,7 +112,7 @@ const baseDeDatos = {
 
             nombre: 'Cebolla cambray', 
 
-            precio: 22.00, 
+            precio: 35.00, 
 
             img: 'frutas/cebollacambray.jpg' 
 
@@ -122,7 +122,7 @@ const baseDeDatos = {
 
             nombre: 'Cebolla morada', 
 
-            precio: 22.00, 
+            precio: 25.00, 
 
             img: 'frutas/cebollamorada.jpg' 
 
@@ -132,7 +132,7 @@ const baseDeDatos = {
 
             nombre: 'Champiñón', 
 
-            precio: 22.00, 
+            precio: 105.00, 
 
             img: 'frutas/champinon.jpg' 
 
@@ -142,7 +142,7 @@ const baseDeDatos = {
 
             nombre: 'Chayote', 
 
-            precio: 22.00, 
+            precio: 25.00, 
 
             img: 'frutas/chayote.jpg' 
 
@@ -152,7 +152,7 @@ const baseDeDatos = {
 
             nombre: 'Chile de árbol', 
 
-            precio: 22.00, 
+            precio: 129.00, 
 
             img: 'frutas/chiledearbol.jpg' 
 
@@ -162,7 +162,7 @@ const baseDeDatos = {
 
             nombre: 'Chile guajillo', 
 
-            precio: 22.00, 
+            precio: 149.00, 
 
             img: 'frutas/chileguajillo.jpg' 
 
@@ -172,7 +172,7 @@ const baseDeDatos = {
 
             nombre: 'Chile habanero', 
 
-            precio: 22.00, 
+            precio: 179.00, 
 
             img: 'frutas/habanero.jpg' 
 
@@ -182,7 +182,7 @@ const baseDeDatos = {
 
             nombre: 'Chile jalapeño', 
 
-            precio: 22.00, 
+            precio: 35.00, 
 
             img: 'frutas/chilejalapeno.jpg' 
 
@@ -192,7 +192,7 @@ const baseDeDatos = {
 
             nombre: 'Chile morita', 
 
-            precio: 22.00, 
+            precio: 149.00, 
 
             img: 'frutas/chilemorita.jpg' 
 
@@ -202,7 +202,7 @@ const baseDeDatos = {
 
             nombre: 'Chile puya', 
 
-            precio: 22.00, 
+            precio: 139.00, 
 
             img: 'frutas/chilepuya.jpg' 
 
@@ -212,7 +212,7 @@ const baseDeDatos = {
 
             nombre: 'Chileserrano verde', 
 
-            precio: 22.00, 
+            precio: 45.00, 
 
             img: 'frutas/chileserrano.jpg' 
 
@@ -222,7 +222,7 @@ const baseDeDatos = {
 
             nombre: 'Cilantro', 
 
-            precio: 22.00, 
+            precio: 89.00, 
 
             img: 'frutas/cilantro.jpg' 
 
@@ -232,7 +232,7 @@ const baseDeDatos = {
 
             nombre: 'Col blanca', 
 
-            precio: 22.00, 
+            precio: 29.50, 
 
             img: 'frutas/colblanca.jpg' 
 
@@ -242,7 +242,7 @@ const baseDeDatos = {
 
             nombre: 'Col morada', 
 
-            precio: 22.00, 
+            precio: 39.00, 
 
             img: 'frutas/colmorada.jpg' 
 
@@ -252,7 +252,7 @@ const baseDeDatos = {
 
             nombre: 'Coliflor', 
 
-            precio: 22.00, 
+            precio: 39.00, 
 
             img: 'frutas/coliflor.jpg' 
 
@@ -262,7 +262,7 @@ const baseDeDatos = {
 
             nombre: 'Fresa', 
 
-            precio: 22.00, 
+            precio: 79.00, 
 
             img: 'frutas/fresa.jpg' 
 
@@ -272,7 +272,7 @@ const baseDeDatos = {
 
             nombre: 'Hierbabuena', 
 
-            precio: 22.00, 
+            precio: 169.00, 
 
             img: 'frutas/hierbabuena.jpg' 
 
@@ -282,7 +282,7 @@ const baseDeDatos = {
 
             nombre: 'Jícama', 
 
-            precio: 22.00, 
+            precio: 19.50, 
 
             img: 'frutas/jicama' 
 
@@ -292,7 +292,7 @@ const baseDeDatos = {
 
             nombre: 'Jitomate bola', 
 
-            precio: 22.00, 
+            precio: 37.00, 
 
             img: 'frutas/jitomatebola.jpg' 
 
@@ -302,7 +302,7 @@ const baseDeDatos = {
 
             nombre: 'Jitomate primera', 
 
-            precio: 22.00, 
+            precio: 18.50, 
 
             img: 'frutas/jitomatepri mera.jpg' 
 
@@ -312,7 +312,7 @@ const baseDeDatos = {
 
             nombre: 'Jitomate segunda', 
 
-            precio: 22.00, 
+            precio: 16.00, 
 
             img: 'frutas/jitomate segunda.jpg' 
 
@@ -332,7 +332,7 @@ const baseDeDatos = {
 
             nombre: 'Lechugas finas', 
 
-            precio: 22.00, 
+            precio: 32.00, 
 
             img: 'frutas/lechuga finas.jpg' 
 
@@ -342,7 +342,7 @@ const baseDeDatos = {
 
             nombre: 'Limón agrio grande', 
 
-            precio: 22.00, 
+            precio: 25.00, 
 
             img: 'frutas/limon con semilla.jpg' 
 
@@ -352,7 +352,7 @@ const baseDeDatos = {
 
             nombre: 'Limón agrio mediano', 
 
-            precio: 22.00, 
+            precio: 21.00, 
 
             img: 'frutas/limonconsemilla.jpg' 
 
@@ -362,7 +362,7 @@ const baseDeDatos = {
 
             nombre: 'Limón sin semilla', 
 
-            precio: 22.00, 
+            precio: 18.50, 
 
             img: 'frutas/limon sinse milla.jpg' 
 
@@ -374,7 +374,7 @@ const baseDeDatos = {
 
             nombre: 'Manzana golden', 
 
-            precio: 22.00, 
+            precio: 44.80, 
 
             img: 'frutas/manzana goolden.jpg' 
 
@@ -384,7 +384,7 @@ const baseDeDatos = {
 
             nombre: 'Naranja amarilla', 
 
-            precio: 22.00, 
+            precio: 39.50, 
 
             img: 'frutas/naranja amarilla.jpg' 
 
@@ -394,7 +394,7 @@ const baseDeDatos = {
 
             nombre: 'Naranja verde', 
 
-            precio: 22.00, 
+            precio: 21.50, 
 
             img: 'frutas/naranja verde.jpg' 
 
@@ -404,7 +404,7 @@ const baseDeDatos = {
 
             nombre: 'Papa blanca', 
 
-            precio: 22.00, 
+            precio: 19.50, 
 
             img: 'frutas/papablanca.jpg' 
 
@@ -414,7 +414,7 @@ const baseDeDatos = {
 
             nombre: 'Pepinillo', 
 
-            precio: 22.00, 
+            precio: 34.50, 
 
             img: 'frutas/pepinillos.jpg' 
 
@@ -424,7 +424,7 @@ const baseDeDatos = {
 
             nombre: 'Pepino', 
 
-            precio: 22.00, 
+            precio: 29.00, 
 
             img: 'frutas/pepino.jpg' 
 
@@ -434,7 +434,7 @@ const baseDeDatos = {
 
             nombre: 'Pera', 
 
-            precio: 22.00, 
+            precio: 89.80, 
 
             img: 'frutas/pera.jpg' 
 
@@ -444,7 +444,7 @@ const baseDeDatos = {
 
             nombre: 'Pimiento morrón', 
 
-            precio: 22.00, 
+            precio: 67.00, 
 
             img: 'frutas/morron.jpg' 
 
@@ -454,7 +454,7 @@ const baseDeDatos = {
 
             nombre: 'Poro', 
 
-            precio: 22.00, 
+            precio: 39.00, 
 
             img: 'frutas/poro.jpg' 
 
@@ -464,7 +464,7 @@ const baseDeDatos = {
 
             nombre: 'Rábanos', 
 
-            precio: 22.00, 
+            precio: 39.00, 
 
             img: 'frutas/rabanos.jpg' 
 
@@ -474,7 +474,7 @@ const baseDeDatos = {
 
             nombre: 'Sandía personal', 
 
-            precio: 22.00, 
+            precio: 19.50, 
 
             img: 'frutas/sandiapersonal.jpg' 
 
@@ -484,7 +484,7 @@ const baseDeDatos = {
 
             nombre: 'Tomate', 
 
-            precio: 22.00, 
+            precio: 13.00, 
 
             img: 'frutas/tomate.jpg' 
 
@@ -494,7 +494,7 @@ const baseDeDatos = {
 
             nombre: 'Uva verde sin semilla', 
 
-            precio: 22.00, 
+            precio: 159.00, 
 
             img: 'frutas/uva verde.jpg' 
 
@@ -504,7 +504,7 @@ const baseDeDatos = {
 
             nombre: 'Zanahoria', 
 
-            precio: 22.00, 
+            precio: 19.50, 
 
             img: 'frutas/zanahoria.jpg' 
 
@@ -519,14 +519,58 @@ const baseDeDatos = {
     ],
     carniceria: [
         // ... Aquí irían tus productos de carnicería en el futuro ...
-        // { 
-        //     nombre: 'Bistec de Res', 
-        //     precio: 190.00, 
-        //     img: 'https://url-de-tu-bistec.jpg' 
-        // },
-    ]
-};
+        { 
+          nombre: 'Pechuga filetiada', 
+           precio: 149.00, 
+           img: '' 
+         },
+         { 
+          nombre: 'Pierna y muslo', 
+           precio: 145.00, 
+           img: '' 
+         },
+         { 
+          nombre: 'milanesa', 
+           precio: 129.00, 
+           img: '' 
+         },
+         { 
+          nombre: 'bisteck picado', 
+           precio: 95.00, 
+           img: '' 
+         },
+         { 
+          nombre: 'carne molida', 
+           precio: 139.00, 
+           img: '' 
+         },
+         { 
+          nombre: 'pechuga', 
+           precio: 149.00, 
+           img: '' 
+         },
 
+
+    
+
+ 
+
+
+
+
+
+
+    ]
+
+
+
+
+    
+
+
+
+
+};
 
 
 // =================================================================
@@ -775,7 +819,6 @@ document.addEventListener('DOMContentLoaded', () => {
     checkFactura.addEventListener('change', toggleCamposFactura);
 
 });
-
 
 
 
