@@ -10,22 +10,22 @@ const baseDeDatos = {
         { 
             nombre: 'Aguacate', 
             precio: 35.00, 
-            img: '/frutas/Aguacate.jpg' 
+            img: 'frutas/Aguacate.jpg' 
         },
         { 
             nombre: 'Albahaca', 
             precio: 18.00, 
-            img: 'albhaca.jpg' 
+            img: 'frutas/albhaca.jpg' 
         },
         { 
             nombre: 'Apio', 
             precio: 22.00, 
-            img: 'apio.jpg' 
+            img: 'frutas/apio.jpg' 
         },
         { 
             nombre: 'Ajo', 
             precio: 22.00, 
-            img: 'ajo.jpg' 
+            img: 'frutas/ajo.jpg' 
         },
         { 
             nombre: 'Brocoli', 
@@ -519,6 +519,7 @@ document.addEventListener('DOMContentLoaded', () => {
     checkFactura.addEventListener('change', toggleCamposFactura);
 
 });
+
 
 
 
