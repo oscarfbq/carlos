@@ -499,34 +499,34 @@ const baseDeDatos = {
     ],
     carniceria: [
         { 
-          nombre: 'Pechuga filetiada', 
+          nombre: 'Pechuga fileteada', 
            precio: 149.00, 
-           img: '' 
+           img: 'carniceria/pechuga filetiada.jpg' 
          },
          { 
           nombre: 'Pierna y muslo', 
            precio: 145.00, 
-           img: '' 
+           img: 'carniceria/pierna y muslo.jpg' 
          },
          { 
-          nombre: 'milanesa', 
+          nombre: 'milanesa de cerdo', 
            precio: 129.00, 
-           img: '' 
+           img: 'carniceria/milanesa de cerdo.jpg' 
          },
          { 
-          nombre: 'bisteck picado', 
+          nombre: 'bistec picado', 
            precio: 95.00, 
-           img: '' 
+           img: 'carniceria/bistec picado.jpg' 
          },
          { 
           nombre: 'carne molida', 
            precio: 139.00, 
-           img: '' 
+           img: 'carniceria/carne molida.jpg' 
          },
          { 
-          nombre: 'pechuga', 
+          nombre: 'pechuga de pollo', 
            precio: 149.00, 
-           img: '' 
+           img: 'carniceria/pechuga de pollo.jpg' 
          },
     ],
     semillas: [
@@ -794,5 +794,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Listener de Factura eliminado
 
 });
+
 
 
