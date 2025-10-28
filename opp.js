@@ -30,113 +30,113 @@ const baseDeDatos = {
         { 
             nombre: 'Brocoli', 
             precio: 22.00, 
-            img: 'brocoli.jpg' 
+            img: 'frutas/brocoli.jpg' 
         },
 
          { 
             nombre: 'Calabaza italiana', 
             precio: 22.00, 
-            img: 'calabaza italiana.jpg' 
+            img: 'frutas/calabaza italiana.jpg' 
         },
         { 
             nombre: 'cebolla.jpg', 
             precio: 22.00, 
-            img: 'cebolla.jpg' 
+            img: 'frutas/cebolla.jpg' 
         },
         { 
             nombre: 'Cebolla blanca grande', 
             precio: 22.00, 
-            img: 'cebolla.jpg' 
+            img: 'frutas/cebolla.jpg' 
         },
         { 
             nombre: 'Cebolla blanca mediana', 
             precio: 22.00, 
-            img: 'cebolla.jpg' 
+            img: 'frutas/cebolla.jpg' 
         },
         { 
             nombre: 'Cebolla cambray', 
             precio: 22.00, 
-            img: 'cebolla cambray.jpg' 
+            img: 'frutas/cebolla cambray.jpg' 
         },
         { 
             nombre: 'Cebolla morada', 
             precio: 22.00, 
-            img: 'cebolla morada.jpg' 
+            img: 'frutas/cebolla morada.jpg' 
         },
         { 
             nombre: 'Champiñón', 
             precio: 22.00, 
-            img: 'champinones.jpg' 
+            img: 'frutas/champinones.jpg' 
         },
         { 
             nombre: 'Chayote', 
             precio: 22.00, 
-            img: 'chayote.jpg' 
+            img: 'frutas/chayote.jpg' 
         },
         { 
             nombre: 'Chile de árbol', 
             precio: 22.00, 
-            img: 'chile de arbol.jpg' 
+            img: 'frutas/chile de arbol.jpg' 
         },
         { 
             nombre: 'Chile guajillo', 
             precio: 22.00, 
-            img: 'chile guajillo.jpg' 
+            img: 'frutas/chile guajillo.jpg' 
         },
         { 
             nombre: 'Chile habanero', 
             precio: 22.00, 
-            img: 'habanero.jpg' 
+            img: 'frutas/habanero.jpg' 
         },
         { 
             nombre: 'Chile jalapeño', 
             precio: 22.00, 
-            img: 'chile jalapeno.jpg' 
+            img: 'frutas/chile jalapeno.jpg' 
         },
         { 
             nombre: 'Chile morita', 
             precio: 22.00, 
-            img: 'chile morita.jpg' 
+            img: 'frutas/chile morita.jpg' 
         },
         { 
             nombre: 'Chile puya', 
             precio: 22.00, 
-            img: 'chile puya.jpg' 
+            img: 'frutas/chile puya.jpg' 
         },
         { 
             nombre: 'Chile serrano verde', 
             precio: 22.00, 
-            img: 'chile serrano.jpg' 
+            img: 'frutas/chile serrano.jpg' 
         },
         { 
             nombre: 'Cilantro', 
             precio: 22.00, 
-            img: 'cilantro.jpg' 
+            img: 'frutas/cilantro.jpg' 
         },
         { 
             nombre: 'Col blanca', 
             precio: 22.00, 
-            img: 'col-blanca.jpg' 
+            img: 'frutas/col-blanca.jpg' 
         },
         { 
             nombre: 'Col morada', 
             precio: 22.00, 
-            img: 'col morada.jpg' 
+            img: 'frutas/col morada.jpg' 
         },
         { 
             nombre: 'Coliflor', 
             precio: 22.00, 
-            img: 'ciliflor.jpg' 
+            img: 'frutas/ciliflor.jpg' 
         },
         { 
             nombre: 'Fresa', 
             precio: 22.00, 
-            img: 'fresa.jpg' 
+            img: 'frutas/fresa.jpg' 
         },
         { 
             nombre: 'Hierbabuena', 
             precio: 22.00, 
-            img: 'hierbabuena.jpg' 
+            img: 'frutas/hierbabuena.jpg' 
         },
         { 
             nombre: 'Jícama', 
@@ -146,113 +146,113 @@ const baseDeDatos = {
         { 
             nombre: 'Jitomate bola', 
             precio: 22.00, 
-            img: 'jitomate bola.jpg' 
+            img: 'frutas/jitomate bola.jpg' 
         },
         { 
             nombre: 'Jitomate primera', 
             precio: 22.00, 
-            img: 'jitomate primera.jpg' 
+            img: 'frutas/jitomate primera.jpg' 
         },
         { 
             nombre: 'Jitomate segunda', 
             precio: 22.00, 
-            img: 'jitomate segunda.jpg' 
+            img: 'frutas/jitomate segunda.jpg' 
         },
         { 
             nombre: 'Lechuga bola', 
             precio: 22.00, 
-            img: 'lechuga bola.jpg' 
+            img: 'frutas/lechuga bola.jpg' 
         },
         { 
             nombre: 'Lechugas finas', 
             precio: 22.00, 
-            img: 'lechuga finas.jpg' 
+            img: 'frutas/lechuga finas.jpg' 
         },
         { 
             nombre: 'Limón agrio grande', 
             precio: 22.00, 
-            img: 'limon con semilla.jpg' 
+            img: 'frutas/limon con semilla.jpg' 
         },
         { 
             nombre: 'Limón agrio mediano', 
             precio: 22.00, 
-            img: 'limon con semilla.jpg' 
+            img: 'frutas/limon con semilla.jpg' 
         },
         { 
             nombre: 'Limón sin semilla', 
             precio: 22.00, 
-            img: 'limon sin semilla.jpg' 
+            img: 'frutas/limon sin semilla.jpg' 
      
         },
         { 
             nombre: 'Manzana golden', 
             precio: 22.00, 
-            img: 'manzana goolden.jpg' 
+            img: 'frutas/manzana goolden.jpg' 
         },
         { 
             nombre: 'Naranja amarilla', 
             precio: 22.00, 
-            img: 'naranja amarilla.jpg' 
+            img: 'frutas/naranja amarilla.jpg' 
         },
         { 
             nombre: 'Naranja verde', 
             precio: 22.00, 
-            img: 'naranja verde.jpg' 
+            img: 'frutas/naranja verde.jpg' 
         },
         { 
             nombre: 'Papa blanca', 
             precio: 22.00, 
-            img: 'papa blanca.jpg' 
+            img: 'frutas/papa blanca.jpg' 
         },
         { 
             nombre: 'Pepinillo', 
             precio: 22.00, 
-            img: 'pepinillos.jpg' 
+            img: 'frutas/pepinillos.jpg' 
         },
         { 
             nombre: 'Pepino', 
             precio: 22.00, 
-            img: 'pepino.jpg' 
+            img: 'frutas/pepino.jpg' 
         },
         { 
             nombre: 'Pera', 
             precio: 22.00, 
-            img: 'pera.jpg' 
+            img: 'frutas/pera.jpg' 
         },
         { 
             nombre: 'Pimiento morrón', 
             precio: 22.00, 
-            img: 'morron.jpg' 
+            img: 'frutas/morron.jpg' 
         },
         { 
             nombre: 'Poro', 
             precio: 22.00, 
-            img: 'poro.jpg' 
+            img: 'frutas/poro.jpg' 
         },
         { 
             nombre: 'Rábanos', 
             precio: 22.00, 
-            img: 'rabanos.jpg' 
+            img: 'frutas/rabanos.jpg' 
         },
         { 
             nombre: 'Sandía personal', 
             precio: 22.00, 
-            img: 'sandia perzonal.jpg' 
+            img: 'frutas/sandia perzonal.jpg' 
         },
         { 
             nombre: 'Tomate', 
             precio: 22.00, 
-            img: 'tomate.jpg' 
+            img: 'frutas/tomate.jpg' 
         },
         { 
             nombre: 'Uva verde sin semilla', 
             precio: 22.00, 
-            img: 'uva verde.jpg' 
+            img: 'frutas/uva verde.jpg' 
         },
         { 
             nombre: 'Zanahoria', 
             precio: 22.00, 
-            img: 'zanahoria.jpg' 
+            img: 'frutas/zanahoria.jpg' 
         },
         
         // ... Puedes añadir 50 productos más aquí ...
@@ -519,6 +519,7 @@ document.addEventListener('DOMContentLoaded', () => {
     checkFactura.addEventListener('change', toggleCamposFactura);
 
 });
+
 
 
 
