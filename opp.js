@@ -1,21 +1,8 @@
 // =================================================================
-
-// (NUEVO) MINI BASE DE DATOS DE PRODUCTOS
-
+// BASE DE DATOS DE PRODUCTOS
 // =================================================================
-
-// ¡AQUÍ ES DONDE AÑADIRÁS TODOS TUS PRODUCTOS!
-
-// Solo copia y pega un bloque { ... }, y cambia los datos.
-
-// Asegúrate de poner la URL correcta de tu imagen.
-
-// =================================================================
-
 const baseDeDatos = {
-
     fruteria: [
-
         { 
 
             nombre: 'Aguacate', 
@@ -509,16 +496,8 @@ const baseDeDatos = {
             img: 'frutas/zanahoria.jpg' 
 
         },
-        
-        // ... Puedes añadir 50 productos más aquí ...
-        // { 
-        //     nombre: 'Manzana Gala', 
-        //     precio: 40.00, 
-        //     img: 'https://url-de-tu-manzana.jpg' 
-        // },
     ],
     carniceria: [
-        // ... Aquí irían tus productos de carnicería en el futuro ...
         { 
           nombre: 'Pechuga filetiada', 
            precio: 149.00, 
@@ -549,27 +528,16 @@ const baseDeDatos = {
            precio: 149.00, 
            img: '' 
          },
-
-
-    
-
- 
-
-
-
-
-
-
+    ],
+    semillas: [
+        { 
+            nombre: 'Nuez de la India', 
+            precio: 220.00, 
+            img: 'ruta/nuez.jpg' 
+        },
+        
+        
     ]
-
-
-
-
-    
-
-
-
-
 };
 
 
@@ -579,19 +547,18 @@ const baseDeDatos = {
 function cargarProductos(productos, gridElementId) {
     const grid = document.getElementById(gridElementId);
     
-    // Si no encuentra el grid (ej. 'grid-carniceria' aún no existe), no hace nada
+    // Si no encuentra el grid, avisa en la consola y no hace nada
     if (!grid) {
         console.warn(`No se encontró el elemento con id: ${gridElementId}`);
         return; 
     }
 
-    grid.innerHTML = ''; // Limpiamos el grid por si acaso
+    grid.innerHTML = ''; // Limpiamos el grid
 
     // Recorremos la lista de productos
     productos.forEach(producto => {
         
         // Creamos el HTML para la tarjeta
-        // Usamos los datos del objeto: producto.img, producto.nombre, producto.precio
         const tarjetaHTML = `
             <div class="producto-card">
                 <img src="${producto.img}" alt="${producto.nombre}" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=Imagen+no+disponible'">
@@ -618,55 +585,60 @@ function cargarProductos(productos, gridElementId) {
 
 
 // =================================================================
-// EL RESTO DE TU CÓDIGO (CARRITO, WHATSAPP, ETC.)
+// LÓGICA PRINCIPAL DEL CARRITO
 // =================================================================
 
+// Espera a que todo el HTML esté cargado
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- VARIABLES IMPORTANTES ---
     
     let carrito = {};
 
-    // ¡¡¡CAMBIA ESTE NÚMERO POR EL TUYO!!! (Incluyendo el 52 si es de México)
-    const TU_NUMERO_DE_WHATSAPP = "524613267745"; // Ejemplo: "5214611234567"
+    // ¡¡¡CAMBIA ESTE NÚMERO POR EL TUYO!!!
+    const TU_NUMERO_DE_WHATSAPP = "524613267745"; 
 
     // Seleccionamos los elementos del DOM
     const listaCarrito = document.getElementById('lista-carrito');
     const totalPedido = document.getElementById('total-pedido');
     const carritoContador = document.getElementById('carrito-contador');
     const btnEnviarWhatsApp = document.getElementById('enviar-whatsapp');
-
-    // Elementos para la factura
-    const checkFactura = document.getElementById('requiere-factura');
-    const datosFactura = document.getElementById('datos-factura');
-    const inputRFC = document.getElementById('cliente-rfc');
-    const inputRazonSocial = document.getElementById('cliente-razon-social');
-    const inputUsoCFDI = document.getElementById('cliente-uso-cfdi');
-
     
-    // --- (NUEVO) LLAMADA PARA CARGAR PRODUCTOS ---
-    // Le decimos que cargue la lista 'fruteria' en el grid 'grid-fruteria'
+    // Selectores de los Grids de productos
+    const gridFruteria = document.getElementById('grid-fruteria');
+    const gridCarniceria = document.getElementById('grid-carniceria');
+    const gridSemillas = document.getElementById('grid-semillas');
+
+
+    // --- (NUEVO) CARGA INICIAL DE PRODUCTOS ---
+    // Carga los productos en sus respectivos grids
     cargarProductos(baseDeDatos.fruteria, 'grid-fruteria');
-    // (En el futuro, cargarías los otros departamentos)
-    // cargarProductos(baseDeDatos.carniceria, 'grid-carniceria');
+    cargarProductos(baseDeDatos.carniceria, 'grid-carniceria');
+    cargarProductos(baseDeDatos.semillas, 'grid-semillas');
 
 
     // --- FUNCIONES DEL CARRITO ---
 
-    function manejarClicFruteria(evento) {
-        const target = evento.target;
+    /**
+     * Maneja todos los clics dentro de un grid de productos
+     * (Añadir al carrito o gestionar kilos)
+     */
+    function manejarClicEnGrid(evento) {
+        const target = evento.target; // Elemento donde se hizo clic
+        
+        // Si se hizo clic en "Añadir a la Cesta"
         if (target.classList.contains('btn-compra')) {
             anadirAlCarrito(target); 
         }
+        // Si se hizo clic en "+" o "-"
         if (target.classList.contains('btn-kilo')) {
             gestionarKilos(target); 
         }
     }
     
-    // (Aquí necesitarás añadir listeners para los otros grids en el futuro)
-    // document.getElementById('grid-carniceria').addEventListener('click', manejarClicFruteria);
-
-
+    /**
+     * Sube o baja la cantidad de kilos en el input
+     */
     function gestionarKilos(boton) {
         const card = boton.closest('.producto-card');
         const input = card.querySelector('.kilo-input');
@@ -678,12 +650,16 @@ document.addEventListener('DOMContentLoaded', () => {
             valor -= 0.5;
         }
 
+        // El mínimo siempre es 0.5 kg
         if (valor < 0.5) {
             valor = 0.5;
         }
         input.value = valor.toFixed(1);
     }
 
+    /**
+     * Añade el producto seleccionado al objeto 'carrito'
+     */
     function anadirAlCarrito(boton) {
         const card = boton.closest('.producto-card');
         const nombre = boton.dataset.nombre;
@@ -691,30 +667,37 @@ document.addEventListener('DOMContentLoaded', () => {
         const kilos = parseFloat(card.querySelector('.kilo-input').value);
 
         if (kilos > 0) {
+            // Si el producto ya está en el carrito, suma los kilos
             if (carrito[nombre]) {
                 carrito[nombre].kilos += kilos;
             } else {
+                // Si es nuevo, lo añade
                 carrito[nombre] = {
                     precio: precio,
                     kilos: kilos
                 };
             }
+            // Actualiza la UI del carrito
             actualizarCarritoUI();
         } else {
             alert("Por favor, selecciona una cantidad mayor a 0.");
         }
     }
 
+    /**
+     * Dibuja los productos del carrito en el modal
+     */
     function actualizarCarritoUI() {
-        listaCarrito.innerHTML = '';
+        listaCarrito.innerHTML = ''; // Limpia la lista
         let total = 0;
         let numItems = 0;
 
+        // Recorre cada producto en el objeto 'carrito'
         for (const nombre in carrito) {
             const item = carrito[nombre];
             const subtotal = item.precio * item.kilos;
             total += subtotal;
-            numItems++; 
+            numItems++; // Incrementa el contador de items
 
             const li = document.createElement('li');
             li.innerHTML = `
@@ -723,56 +706,54 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             listaCarrito.appendChild(li);
         }
+        
+        // Actualiza el total y el contador del ícono
         totalPedido.textContent = `Total: $${total.toFixed(2)}`;
         carritoContador.textContent = numItems;
     }
 
+    /**
+     * Elimina un producto del carrito al hacer clic en la 'x'
+     */
     function eliminarDelCarrito(evento) {
         if (evento.target.classList.contains('btn-eliminar')) {
             const nombre = evento.target.dataset.nombre;
-            delete carrito[nombre];
-            actualizarCarritoUI();
+            delete carrito[nombre]; // Lo borra del objeto
+            actualizarCarritoUI(); // Vuelve a dibujar el carrito
         }
     }
 
+    /**
+     * Genera el mensaje y abre la ventana de WhatsApp
+     */
     function enviarPedidoWhatsApp() {
+        // Recoge los datos del cliente
         const nombreCliente = document.getElementById('cliente-nombre').value;
         const telefonoCliente = document.getElementById('cliente-telefono').value;
         const direccionCliente = document.getElementById('cliente-direccion').value;
 
+        // Valida que los campos no estén vacíos
         if (!nombreCliente || !telefonoCliente || !direccionCliente) {
             alert("Por favor, completa tu Nombre, Teléfono y Dirección.");
             return;
         }
 
+        // Valida que el carrito no esté vacío
+        if (Object.keys(carrito).length === 0) {
+            alert("Tu carrito está vacío. Añade productos antes de enviar.");
+            return;
+        }
+
+        // --- Construcción del Mensaje ---
         let mensaje = `¡Hola D'LCAMPO! 👋 Quiero hacer un pedido:\n\n`;
         mensaje += `*Cliente:* ${nombreCliente}\n`;
         mensaje += `*Teléfono:* ${telefonoCliente}\n`;
         mensaje += `*Dirección:* ${direccionCliente}\n\n`;
 
-        if (checkFactura.checked) {
-            const rfc = inputRFC.value;
-            const razonSocial = inputRazonSocial.value;
-            const usoCFDI = inputUsoCFDI.value;
-
-            if (!rfc || !razonSocial || !usoCFDI) {
-                alert("Por favor, completa todos tus datos de facturación (RFC, Razón Social y Uso de CFDI).");
-                return;
-            }
-            
-            mensaje += `*--- DATOS DE FACTURACIÓN ---*\n`;
-            mensaje += `*RFC:* ${rfc}\n`;
-            mensaje += `*Razón Social:* ${razonSocial}\n`;
-            mensaje += `*Uso de CFDI:* ${usoCFDI}\n\n`;
-        }
+        // Parte de Factura eliminada
 
         mensaje += `*MI PEDIDO:*\n`;
         let total = 0;
-        
-        if (Object.keys(carrito).length === 0) {
-            alert("Tu carrito está vacío. Añade productos antes de enviar.");
-            return;
-        }
 
         for (const nombre in carrito) {
             const item = carrito[nombre];
@@ -783,31 +764,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
         mensaje += `\n*TOTAL A PAGAR: $${total.toFixed(2)}*`;
 
+        // Codifica el mensaje para la URL y abre WhatsApp
         const mensajeCodificado = encodeURIComponent(mensaje);
         const urlWhatsApp = `https://api.whatsapp.com/send?phone=${TU_NUMERO_DE_WHATSAPP}&text=${mensajeCodificado}`;
 
         window.open(urlWhatsApp, '_blank');
     }
 
-    function toggleCamposFactura() {
-        if (checkFactura.checked) {
-            datosFactura.style.display = 'block'; 
-            inputRFC.required = true;
-            inputRazonSocial.required = true;
-            inputUsoCFDI.required = true;
-        } else {
-            datosFactura.style.display = 'none'; 
-            inputRFC.required = false;
-            inputRazonSocial.required = false;
-            inputUsoCFDI.required = false;
-        }
-    }
-
     // --- EVENT LISTENERS (Aquí conectamos todo) ---
 
-    // 1. Escuchar clics en la sección de frutería (para +,- y Añadir)
-    // (Usamos el 'id' del grid que pusimos en el HTML)
-    document.getElementById('grid-fruteria').addEventListener('click', manejarClicFruteria);
+    // 1. Escuchar clics en los grids de productos
+    // Usamos 'if (grid)' por si algún grid no existe en el HTML, para evitar errores
+    if (gridFruteria) {
+        gridFruteria.addEventListener('click', manejarClicEnGrid);
+    }
+    if (gridCarniceria) {
+        gridCarniceria.addEventListener('click', manejarClicEnGrid);
+    }
+    if (gridSemillas) {
+        gridSemillas.addEventListener('click', manejarClicEnGrid);
+    }
 
     // 2. Escuchar clics en la lista del carrito para "Eliminar"
     listaCarrito.addEventListener('click', eliminarDelCarrito);
@@ -815,10 +791,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Escuchar clic en el botón de "Enviar Pedido"
     btnEnviarWhatsApp.addEventListener('click', enviarPedidoWhatsApp);
     
-    // 4. Escuchar cambios en el checkbox de factura
-    checkFactura.addEventListener('change', toggleCamposFactura);
+    // 4. Listener de Factura eliminado
 
 });
-
-
 
