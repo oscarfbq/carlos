@@ -135,25 +135,7 @@ const baseDeDatos = {
 
         },
 
-        { 
-
-            nombre: 'Chile de árbol', 
-
-            precio: 129.00, 
-
-            img: 'frutas/chile de arbol.jpg' 
-
-        },
-
-        { 
-
-            nombre: 'Chile guajillo', 
-
-            precio: 149.00, 
-
-            img: 'frutas/chileguajillo.jpg' 
-
-        },
+        
 
         { 
 
@@ -175,25 +157,9 @@ const baseDeDatos = {
 
         },
 
-        { 
+       
 
-            nombre: 'Chile morita', 
-
-            precio: 149.00, 
-
-            img: 'frutas/chilemorita.jpg' 
-
-        },
-
-        { 
-
-            nombre: 'Chile puya', 
-
-            precio: 139.00, 
-
-            img: 'frutas/chilepuya.jpg' 
-
-        },
+       
 
         { 
 
@@ -596,6 +562,43 @@ const baseDeDatos = {
             precio: 29.50, 
             img: 'semillas y secos/cueritos rayados.webp' 
         },
+         { 
+
+            nombre: 'Chile morita', 
+
+            precio: 149.00, 
+
+            img: 'frutas/chilemorita.jpg' 
+
+        },
+         { 
+
+            nombre: 'Chile puya', 
+
+            precio: 139.00, 
+
+            img: 'frutas/chilepuya.jpg' 
+
+        },
+        { 
+
+            nombre: 'Chile de árbol', 
+
+            precio: 129.00, 
+
+            img: 'frutas/chile de arbol.jpg' 
+
+        },
+
+        { 
+
+            nombre: 'Chile guajillo', 
+
+            precio: 149.00, 
+
+            img: 'frutas/chileguajillo.jpg' 
+
+        },
         { 
             nombre: 'Cueritos enteros', 
             precio: 29.50, 
@@ -891,6 +894,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Listener de Factura eliminado
 
 });
+
 
 
 
