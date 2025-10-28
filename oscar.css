@@ -1,16 +1,13 @@
-/* =================================================================
-   ESTILOS GENERALES Y FUENTE
-   ================================================================= */
+
+
+
+/* Estilos generales y tipografía */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f8f8f8;
     color: #333;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 .container {
@@ -19,16 +16,12 @@ body {
     margin: 0 auto;
 }
 
-/* =================================================================
-   HEADER (BARRA DE NAVEGACIÓN)
-   ================================================================= */
+/* Encabezado (Header) */
 header {
-    background-color: #ffffff;
-    padding: 1rem 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    background-color: #4CAF50; /* Verde brillante */
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header .container {
@@ -38,244 +31,216 @@ header .container {
 }
 
 header h1 {
-    margin: 0 10px;
-    font-size: 1.5rem;
-    color: #4CAF50; /* Un color verde para la frutería */
+    margin: 0;
+    font-size: 1.8em;
 }
 
-header nav {
-    display: flex;
-    align-items: center;
-}
-
-header nav a {
+nav a {
+    color: white;
     margin-left: 20px;
     text-decoration: none;
-    color: #555;
     font-weight: 600;
-    padding: 5px 0;
-    border-bottom: 2px solid transparent;
-    transition: color 0.3s, border-color 0.3s;
+    transition: color 0.3s;
 }
 
-header nav a:hover {
-    color: #4CAF50;
-    border-bottom-color: #4CAF50;
+nav a:hover {
+    color: #FFC107; /* Amarillo para destacar */
 }
 
-a.carrito-btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s;
+/* Sección principal (Main) */
+main {
+    padding: 40px 0;
+    text-align: center;
 }
 
-a.carrito-btn:hover {
-    background-color: #45a049;
-    color: white; /* Asegura que el color no cambie en hover */
-    border-bottom: 2px solid transparent; /* Quita el borde de otros links */
+main h2 {
+    color: #387038;
+    margin-bottom: 30px;
+    font-weight: 700;
 }
 
-/* =================================================================
-   LÓGICA DE NAVEGACIÓN (PÁGINAS)
-   ================================================================= */
+
+/* ============================================= */
+/* === LÓGICA PARA OCULTAR/MOSTRAR PÁGINAS === */
+/* ============================================= */
+
+/* 1. Oculta TODAS las páginas por defecto */
 .pagina {
-    display: none; /* Oculta todas las páginas */
-    padding-top: 20px;
+ display: none;
 }
 
-/* Muestra la página de departamentos por defecto (sin :target) */
-#departamentos {
-    display: block;
-}
-
-/* Muestra la página que esté en la URL (ej. #fruteria) */
+/* 2. Muestra SÓLO la página que está activa en la URL */
+/* (Funciona para #fruteria, #Carnicería, #semillas y #departamentos) */
 .pagina:target {
-    display: block;
-}
-
-/* Oculta las otras páginas cuando una es el :target */
-/* Si #fruteria es target, oculta #departamentos */
-#fruteria:target ~ #departamentos {
-    display: none;
-}
-/* Si #departamentos es target, oculta #fruteria */
-#departamentos:target ~ #fruteria {
-    display: none;
+display: block;
 }
 
 
-/* =================================================================
-   ESTILOS DE DEPARTAMENTOS
-   ================================================================= */
+
+/* ===== Grid de Departamentos (Menú principal) ===== */
 .grid-departamentos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 25px;
+    margin-bottom: 40px;
 }
 
 .departamento-card {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    overflow: hidden;
+    background-color: #34495e; /* Azul oscuro/gris de tu imagen */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
     text-decoration: none;
-    color: #333;
-    transition: transform 0.3s, box-shadow 0.3s;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .departamento-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .departamento-card img {
     width: 100%;
-    height: 220px;
+    height: 150px;
     object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    background-color: #ecf0f1;
 }
 
 .departamento-card h3 {
-    text-align: center;
-    padding: 1.5rem;
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: white;
 }
 
-/* =================================================================
-   ESTILOS DE PRODUCTOS (FRUTERÍA)
-   ================================================================= */
+
+/* ===== Botón de Volver y Header de Productos ===== */
 .header-productos {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.header-productos h2 {
+    margin: 0;
+    text-align: right;
+    flex-grow: 1;
 }
 
 .btn-volver {
-    background-color: #6c757d;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 20px;
+    display: inline-block;
     text-decoration: none;
+    background-color: #777;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
     font-weight: 600;
+    font-size: 0.9em;
     transition: background-color 0.3s;
 }
 
 .btn-volver:hover {
-    background-color: #5a6268;
+    background-color: #555;
 }
 
+
+/* ===== Grid de Productos (Tu código original) ===== */
 .grid-productos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
 .producto-card {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .producto-card img {
     width: 100%;
-    height: 180px;
-    object-fit: contain; /* 'contain' es mejor para productos */
-    border-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
     margin-bottom: 15px;
 }
 
 .producto-card h3 {
-    font-size: 1.15rem;
-    margin: 0 0 10px 0;
+    font-size: 1.4em;
+    color: #387038;
+    margin-bottom: 5px;
 }
 
-.producto-card .precio {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #4CAF50;
-    margin-bottom: 15px;
+.precio {
+    color: #E91E63;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 10px 0;
 }
 
+/* Selector de Kilos */
 .kilo-selector {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
+    margin: 15px 0;
 }
 
-.btn-kilo {
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    width: 35px;
-    height: 35px;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #555;
-    cursor: pointer;
-    border-radius: 50%;
-    line-height: 32px;
+.kilo-selector label {
+    margin-right: 10px;
+    font-weight: 400;
 }
 
-.kilo-input {
-    width: 60px;
+.kilo-selector input {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     text-align: center;
-    border: none;
-    background: transparent;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 0 5px;
-    padding: 5px;
 }
 
-.kilo-label {
-    margin-left: 5px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: #777;
-}
-
+/* Botón de Compra */
 .btn-compra {
-    background-color: #007bff;
+    background-color: #FF9800;
     color: white;
     border: none;
-    padding: 12px;
+    padding: 12px 25px;
     border-radius: 25px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 1rem;
-    width: 100%;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.1s;
+    text-transform: uppercase;
 }
 
 .btn-compra:hover {
-    background-color: #0056b3;
+    background-color: #FB8C00;
+    transform: translateY(-2px);
 }
 
+/* Nota de Advertencia */
 .nota {
-    text-align: center;
-    margin-top: 30px;
-    color: #777;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #ffdddd;
+    border-left: 5px solid #f44336;
+    color: #D32F2F;
+    font-weight: 600;
+    text-align: left;
 }
 
-/* =================================================================
-   FOOTER (CONTACTO)
-   ================================================================= */
+/* Pie de página (Footer) */
 footer {
     background-color: #333;
-    color: #f4f4f4;
+    color: white;
+    padding: 20px 0;
     text-align: center;
-    padding: 30px 0;
-    margin-top: 40px;
 }
 
 footer h3 {
@@ -284,151 +249,164 @@ footer h3 {
 
 footer p {
     margin: 5px 0;
+    font-size: 0.9em;
 }
 
-/* =================================================================
-   MODAL DEL CARRITO
-   ================================================================= */
+
+/* ===================================================== */
+/* ESTILOS PARA EL MODAL DEL CARRITO                     */
+/* ===================================================== */
+
 .modal {
-    position: fixed;
-    top: 0;
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.6);
-    display: none; /* Se activa con :target */
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.6); 
     align-items: center;
     justify-content: center;
-    z-index: 200;
 }
 
+/* Muestra el modal cuando es el :target */
 .modal:target {
-    display: flex;
+    display: flex; 
 }
 
 .modal-contenido {
-    background-color: white;
+    background-color: #fefefe;
+    margin: auto;
     padding: 30px;
-    border-radius: 12px;
+    border: 1px solid #888;
     width: 90%;
     max-width: 600px;
-    position: relative;
-    max-height: 90vh;
-    overflow-y: auto;
+    border-radius: 10px;
+    position: relative; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .modal-cerrar {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 2.5rem;
-    text-decoration: none;
     color: #aaa;
-    font-weight: 300;
-    line-height: 1;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.modal-cerrar:hover {
-    color: #333;
+.modal-cerrar:hover,
+.modal-cerrar:focus {
+    color: black;
+    cursor: pointer;
 }
 
+/* Estilos de la lista de productos en el carrito */
 #lista-carrito {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    max-height: 200px; 
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
 }
 
 #lista-carrito li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid #eee;
+    padding: 10px 5px;
+    border-bottom: 1px dotted #eee;
 }
 
 #lista-carrito li:last-child {
     border-bottom: none;
 }
 
+/* Botón para eliminar un item del carrito */
 .btn-eliminar {
-    background-color: #dc3545;
+    background-color: #f44336; /* Rojo */
     color: white;
     border: none;
-    border-radius: 50%;
+    border-radius: 50%; /* Círculo */
     width: 25px;
     height: 25px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 1rem;
-    line-height: 25px;
+    font-size: 14px;
+    line-height: 25px; 
+    text-align: center;
+}
+.btn-eliminar:hover {
+    background-color: #d32f2f;
 }
 
 #total-pedido {
     text-align: right;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #333;
+    color: #387038;
+    font-size: 1.5em;
 }
 
-/* Formulario en el Modal */
+/* Estilos del formulario en el modal */
 #formulario-pedido label {
-    display: block;
+    display: block; 
     margin-top: 15px;
-    margin-bottom: 5px;
+    text-align: left;
     font-weight: 600;
+    color: #555;
 }
 
 #formulario-pedido input[type="text"],
 #formulario-pedido input[type="tel"],
 #formulario-pedido textarea {
-    width: 100%;
-    padding: 12px;
+    width: 100%; 
+    padding: 10px;
+    margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
+    border-radius: 5px;
+    box-sizing: border-box; 
 }
 
 #formulario-pedido textarea {
-    resize: vertical;
-    min-height: 80px;
+    height: 80px;
+    resize: vertical; 
 }
 
-.factura-toggle {
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
+#enviar-whatsapp {
+    width: 100%; 
+    margin-top: 20px;
+    font-size: 1.1em;
 }
 
-.factura-toggle label {
-    margin: 0 0 0 10px;
-    font-weight: normal;
-}
+/* ===================================================== */
+/* ESTILOS PARA CAMPOS DE FACTURA                        */
+/* ===================================================== */
 
+/* Contenedor para los campos que se ocultan */
 .campos-ocultos {
-    display: none; /* JS lo mostrará si es necesario */
+    display: none; /* Ocultos por defecto */
 }
 
-/* =================================================================
-   RESPONSIVE (PARA MÓVILES)
-   ================================================================= */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        gap: 15px;
-    }
+/* Estilo para el contenedor del checkbox */
+.factura-toggle {
+    text-align: left;
+    margin: 15px 0;
+    display: flex; 
+    align-items: center;
+}
 
-    header nav {
-        width: 100%;
-        justify-content: space-around;
-    }
-    
-    header nav a {
-        margin-left: 0;
-    }
+/* Ajuste para que el label del checkbox no ocupe toda la línea */
+.factura-toggle label {
+    margin: 0 0 0 10px; /* Quita margen superior y añade a la izquierda */
+    font-weight: bold;
+    color: #333;
+}
 
-    .modal-contenido {
-        width: 95%;
-        padding: 20px;
-    }
+#formulario-pedido hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
 }
