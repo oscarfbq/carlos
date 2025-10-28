@@ -1,16 +1,78 @@
 /* =================================================================
-   ESTILOS GENERALES Y FUENTE
+   ADAPTACIÓN A MÓVILES (Media Queries)
    ================================================================= */
+
+/* --- Si la pantalla es de 768px o más pequeña (tablets y teléfonos) --- */
+@media (max-width: 768px) {
+
+    /* 1. Ajusta el Encabezado */
+    header .container {
+        flex-direction: column; /* Pone el logo/título encima de la navegación */
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 15px; /* Separa la navegación del título */
+    }
+
+    nav a {
+        margin: 5px 10px; /* Ajusta el espacio de los botones de navegación */
+    }
+
+    /* 2. Ajusta Títulos */
+    main h2 {
+        font-size: 1.8rem; /* Reduce el tamaño de "Nuestros Departamentos" */
+    }
+
+    .producto-card h3 {
+        font-size: 1.2rem; /* Reduce el tamaño del nombre del producto */
+    }
+
+    /* 3. Ajusta el Modal del Carrito */
+    .modal-contenido {
+        width: 95%; /* Hace que el modal ocupe casi toda la pantalla */
+        padding: 20px;
+        max-height: 90vh; /* Se asegura que no sea más alto que la pantalla */
+    }
+
+    #lista-carrito {
+        max-height: 150px; /* Reduce la altura de la lista en móviles */
+    }
+
+    /* 4. Ajusta el Pie de Página */
+    footer p {
+        font-size: 0.8rem; /* Letra más pequeña en el footer */
+    }
+}
+
+/* --- Si la pantalla es muy pequeña (teléfonos) --- */
+@media (max-width: 480px) {
+    
+    header h1 {
+        font-size: 1.5rem; /* Título principal más pequeño */
+    }
+
+    /* Ajusta los botones de kilo para que quepan */
+    .btn-kilo {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .kilo-input {
+        width: 40px;
+        font-size: 1rem;
+    }
+}
+
+
+/* Estilos generales y tipografía */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f8f8f8;
     color: #333;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 .container {
@@ -19,16 +81,12 @@ body {
     margin: 0 auto;
 }
 
-/* =================================================================
-   HEADER (BARRA DE NAVEGACIÓN)
-   ================================================================= */
+/* Encabezado (Header) */
 header {
-    background-color: #ffffff;
-    padding: 1rem 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header .container {
@@ -38,244 +96,254 @@ header .container {
 }
 
 header h1 {
-    margin: 0 10px;
-    font-size: 1.5rem;
-    color: #4CAF50; /* Un color verde para la frutería */
+    margin: 0;
+    font-size: 1.8em;
 }
 
-header nav {
-    display: flex;
-    align-items: center;
-}
-
-header nav a {
+nav a {
+    color: white;
     margin-left: 20px;
     text-decoration: none;
-    color: #555;
     font-weight: 600;
-    padding: 5px 0;
-    border-bottom: 2px solid transparent;
-    transition: color 0.3s, border-color 0.3s;
+    transition: color 0.3s;
 }
 
-header nav a:hover {
-    color: #4CAF50;
-    border-bottom-color: #4CAF50;
+nav a:hover {
+    color: #FFC107;
 }
 
-a.carrito-btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s;
+/* Sección principal (Main) */
+main {
+    padding: 40px 0;
+    text-align: center;
 }
 
-a.carrito-btn:hover {
-    background-color: #45a049;
-    color: white; /* Asegura que el color no cambie en hover */
-    border-bottom: 2px solid transparent; /* Quita el borde de otros links */
+main h2 {
+    color: #387038;
+    margin-bottom: 30px;
+    font-weight: 700;
 }
+
 
 /* =================================================================
-   LÓGICA DE NAVEGACIÓN (PÁGINAS)
+   LÓGICA DE NAVEGACIÓN (PÁGINAS) - CORREGIDA Y COMPLETA
    ================================================================= */
+
+/* 1. Oculta todas las páginas por defecto */
 .pagina {
-    display: none; /* Oculta todas las páginas */
-    padding-top: 20px;
+    display: none;
+    padding-top: 20px; /* (Tu padding original) */
 }
 
-/* Muestra la página de departamentos por defecto (sin :target) */
+/* 2. Muestra la página de departamentos por defecto (sin :target) */
 #departamentos {
     display: block;
 }
 
-/* Muestra la página que esté en la URL (ej. #fruteria) */
+/* 3. Muestra CUALQUIER página que sea el :target */
 .pagina:target {
     display: block;
 }
 
-/* Oculta las otras páginas cuando una es el :target */
-/* Si #fruteria es target, oculta #departamentos */
-#fruteria:target ~ #departamentos {
+/* 4. Si CUALQUIER página de productos es :target, OCULTA la página de departamentos */
+/* (Revisa que tu ID "Carniceria" tenga la 'C' mayúscula si así la usas) */
+#fruteria:target ~ #departamentos,
+#Carniceria:target ~ #departamentos,
+#semillas:target ~ #departamentos {
     display: none;
 }
-/* Si #departamentos es target, oculta #fruteria */
-#departamentos:target ~ #fruteria {
+
+/* 5. Si vuelves a #departamentos, OCULTA las páginas de productos */
+#departamentos:target ~ #fruteria,
+#departamentos:target ~ #Carniceria,
+#departamentos:target ~ #semillas {
     display: none;
 }
 
 
-/* =================================================================
-   ESTILOS DE DEPARTAMENTOS
-   ================================================================= */
+/* ===== Grid de Departamentos (Menú principal) ===== */
 .grid-departamentos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 25px;
+    margin-bottom: 40px;
 }
 
 .departamento-card {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    overflow: hidden;
+    background-color: #34495e;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
     text-decoration: none;
-    color: #333;
-    transition: transform 0.3s, box-shadow 0.3s;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .departamento-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .departamento-card img {
     width: 100%;
-    height: 220px;
+    height: 150px;
     object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    background-color: #ecf0f1;
 }
 
 .departamento-card h3 {
-    text-align: center;
-    padding: 1.5rem;
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: white;
 }
 
-/* =================================================================
-   ESTILOS DE PRODUCTOS (FRUTERÍA)
-   ================================================================= */
+
+/* ===== Botón de Volver y Header de Productos ===== */
 .header-productos {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.header-productos h2 {
+    margin: 0;
+    text-align: right;
+    flex-grow: 1;
 }
 
 .btn-volver {
-    background-color: #6c757d;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 20px;
+    display: inline-block;
     text-decoration: none;
+    background-color: #777;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
     font-weight: 600;
+    font-size: 0.9em;
     transition: background-color 0.3s;
 }
 
 .btn-volver:hover {
-    background-color: #5a6268;
+    background-color: #555;
 }
 
+
+/* ===== Grid de Productos ===== */
 .grid-productos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
 .producto-card {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .producto-card img {
     width: 100%;
-    height: 180px;
-    object-fit: contain; /* 'contain' es mejor para productos */
-    border-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
     margin-bottom: 15px;
 }
 
 .producto-card h3 {
-    font-size: 1.15rem;
-    margin: 0 0 10px 0;
+    font-size: 1.4em;
+    color: #387038;
+    margin-bottom: 5px;
 }
 
-.producto-card .precio {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #4CAF50;
-    margin-bottom: 15px;
+.precio {
+    color: #E91E63;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 10px 0;
 }
 
+/* Selector de Kilos */
 .kilo-selector {
-    display: flex;
-    align-items: center;
+    display: flex; /* Alinea los botones y el input */
     justify-content: center;
-    margin-bottom: 20px;
+    align-items: center;
+    margin: 20px 0;
 }
 
 .btn-kilo {
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    width: 35px;
-    height: 35px;
-    font-size: 1.8rem;
-    font-weight: 600;
+    background-color: #eee;
+    border: 1px solid #ccc;
     color: #555;
+    font-weight: bold;
+    font-size: 1.2rem;
     cursor: pointer;
-    border-radius: 50%;
-    line-height: 32px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Círculos */
 }
 
 .kilo-input {
-    width: 60px;
+    width: 50px;
     text-align: center;
+    font-size: 1.1rem;
     border: none;
+    margin: 0 10px;
     background: transparent;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 0 5px;
-    padding: 5px;
 }
 
 .kilo-label {
-    margin-left: 5px;
-    font-weight: 600;
     font-size: 1.1rem;
-    color: #777;
+    color: #666;
+    margin-left: 5px;
 }
 
+/* Botón de Compra */
 .btn-compra {
-    background-color: #007bff;
+    background-color: #FF9800;
     color: white;
     border: none;
-    padding: 12px;
+    padding: 12px 25px;
     border-radius: 25px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 1rem;
-    width: 100%;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.1s;
+    text-transform: uppercase;
+    width: 100%; /* El botón ocupa todo el ancho */
+    box-sizing: border-box; /* Importante para el padding */
 }
 
 .btn-compra:hover {
-    background-color: #0056b3;
+    background-color: #FB8C00;
+    transform: translateY(-2px);
 }
 
+/* Nota de Advertencia */
 .nota {
-    text-align: center;
-    margin-top: 30px;
-    color: #777;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #ffdddd;
+    border-left: 5px solid #f44336;
+    color: #D32F2F;
+    font-weight: 600;
+    text-align: left;
 }
 
-/* =================================================================
-   FOOTER (CONTACTO)
-   ================================================================= */
+/* Pie de página (Footer) */
 footer {
     background-color: #333;
-    color: #f4f4f4;
+    color: white;
+    padding: 20px 0;
     text-align: center;
-    padding: 30px 0;
-    margin-top: 40px;
 }
 
 footer h3 {
@@ -284,152 +352,136 @@ footer h3 {
 
 footer p {
     margin: 5px 0;
+    font-size: 0.9em;
 }
 
-/* =================================================================
-   MODAL DEL CARRITO
-   ================================================================= */
+
+/* ===================================================== */
+/* ESTILOS PARA EL MODAL DEL CARRITO                       */
+/* ===================================================== */
+
 .modal {
-    position: fixed;
-    top: 0;
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.6);
-    display: none; /* Se activa con :target */
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.6); 
     align-items: center;
     justify-content: center;
-    z-index: 200;
 }
 
+/* Muestra el modal cuando es el :target */
 .modal:target {
-    display: flex;
+    display: flex; 
 }
 
 .modal-contenido {
-    background-color: white;
+    background-color: #fefefe;
+    margin: auto;
     padding: 30px;
-    border-radius: 12px;
+    border: 1px solid #888;
     width: 90%;
     max-width: 600px;
-    position: relative;
-    max-height: 90vh;
-    overflow-y: auto;
+    border-radius: 10px;
+    position: relative; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .modal-cerrar {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 2.5rem;
-    text-decoration: none;
     color: #aaa;
-    font-weight: 300;
-    line-height: 1;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.modal-cerrar:hover {
-    color: #333;
+.modal-cerrar:hover,
+.modal-cerrar:focus {
+    color: black;
+    cursor: pointer;
 }
 
+/* Estilos de la lista de productos en el carrito */
 #lista-carrito {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    max-height: 200px; 
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
 }
 
 #lista-carrito li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid #eee;
+    padding: 10px 5px;
+    border-bottom: 1px dotted #eee;
 }
 
 #lista-carrito li:last-child {
     border-bottom: none;
 }
 
+/* Botón para eliminar un item del carrito */
 .btn-eliminar {
-    background-color: #dc3545;
+    background-color: #f44336; /* Rojo */
     color: white;
     border: none;
-    border-radius: 50%;
+    border-radius: 50%; /* Círculo */
     width: 25px;
     height: 25px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 1rem;
-    line-height: 25px;
+    font-size: 14px;
+    line-height: 25px; 
+    text-align: center;
+}
+.btn-eliminar:hover {
+    background-color: #d32f2f;
 }
 
 #total-pedido {
     text-align: right;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #333;
+    color: #387038;
+    font-size: 1.5em;
 }
 
-/* Formulario en el Modal */
+/* Estilos del formulario en el modal */
 #formulario-pedido label {
-    display: block;
+    display: block; 
     margin-top: 15px;
-    margin-bottom: 5px;
+    text-align: left;
     font-weight: 600;
+    color: #555;
 }
 
 #formulario-pedido input[type="text"],
 #formulario-pedido input[type="tel"],
 #formulario-pedido textarea {
-    width: 100%;
-    padding: 12px;
+    width: 100%; 
+    padding: 10px;
+    margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
+    border-radius: 5px;
+    box-sizing: border-box; 
 }
 
 #formulario-pedido textarea {
-    resize: vertical;
-    min-height: 80px;
+    height: 80px;
+    resize: vertical; 
 }
 
-.factura-toggle {
-    display: flex;
-    align-items: center;
+/* Estilos de factura eliminados */
+
+#formulario-pedido hr {
+    border: none;
+    border-top: 1px solid #eee;
     margin: 20px 0;
 }
-
-.factura-toggle label {
-    margin: 0 0 0 10px;
-    font-weight: normal;
-}
-
-.campos-ocultos {
-    display: none; /* JS lo mostrará si es necesario */
-}
-
-/* =================================================================
-   RESPONSIVE (PARA MÓVILES)
-   ================================================================= */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    header nav {
-        width: 100%;
-        justify-content: space-around;
-    }
-    
-    header nav a {
-        margin-left: 0;
-    }
-
-    .modal-contenido {
-        width: 95%;
-        padding: 20px;
-    }
-}
-
