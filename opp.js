@@ -509,22 +509,22 @@ const baseDeDatos = {
            img: 'carniceria/pierna y muslo.JPG' 
          },
          { 
-          nombre: 'milanesa de cerdo', 
+          nombre: 'Milanesa de cerdo', 
            precio: 129.00, 
            img: 'carniceria/milanesa de cerdo.JPG' 
          },
          { 
-          nombre: 'bistec picado', 
+          nombre: 'Bistec picado', 
            precio: 95.00, 
            img: 'carniceria/bistec picado.JPG' 
          },
          { 
-          nombre: 'carne molida', 
+          nombre: 'Carne molida', 
            precio: 139.00, 
            img: 'carniceria/carne molida.JPG' 
          },
          { 
-          nombre: 'pechuga de pollo', 
+          nombre: 'Pechuga de pollo', 
            precio: 149.00, 
            img: 'carniceria/pechuga de pollo.jpg' 
          },
@@ -895,6 +895,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Listener de Factura eliminado
 
 });
+
 
 
 
