@@ -557,9 +557,9 @@ const baseDeDatos = {
             img: 'semillas y secos/arros paisa.webp' 
         },
         { 
-            nombre: 'Arros zaman', 
+            nombre: 'Arros saman', 
             precio: .00, 
-            img: 'semillas y secos/arroz zaman.jpg' 
+            img: 'semillas y secos/arroz saman.jpg' 
         },
         { 
             nombre: 'Azucar', 
@@ -599,7 +599,7 @@ const baseDeDatos = {
         { 
             nombre: 'Cueritos enteros', 
             precio: .00, 
-            img: 'semillas y secos/cueritos enteros.webp' 
+            img: 'semillas y secos/cueritosn enteros.webp' 
         },
         { 
             nombre: 'Frijol de junio', 
@@ -895,6 +895,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Listener de Factura eliminado
 
 });
+
 
 
 
