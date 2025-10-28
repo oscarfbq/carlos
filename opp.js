@@ -67,7 +67,7 @@ const baseDeDatos = {
 
         { 
 
-            nombre: 'cebolla.jpg', 
+            nombre: 'cebolla', 
 
             precio: 17.00, 
 
@@ -891,6 +891,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Listener de Factura eliminado
 
 });
+
 
 
 
