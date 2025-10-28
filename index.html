@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'LCAMPO - Tienda</title>
+    <link rel="stylesheet" href="oscar.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head> 
+<body>
+    <header>
+        <div class="container">
+            <img src="https://pngimg.com/uploads/moustache/moustache_PNG16.png" width="50" height="50" alt="Logo D'LCAMPO">
+            <h1>D'LCAMPO</h1>
+            <img src="https://pngimg.com/uploads/moustache/moustache_PNG16.png" width="50" height="50" alt="Logo D'LCAMPO">
+            <nav>
+                <a href="#departamentos">Inicio</a> 
+                <a href="#contacto">Contacto</a>
+                <a class="carrito-btn" href="#carrito-modal">
+                    🛒 Pedido (<span id="carrito-contador">0</span>)
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <section id="fruteria" class="pagina">
+                <div class="header-productos">
+                    <a href="#departamentos" class="btn-volver">← Volver</a>
+                    <h2>Frutas por Kilo</h2>
+                </div>
+                
+                <div class="grid-productos" id="grid-fruteria">
+                    </div>
+                
+                <p class="nota">🚨 *NOTA IMPORTANTE:* ALV CON EL PERICO PERRO BORACHO TE DICE EL GORDO</p>
+            </section>
+
+            <section id="departamentos" class="pagina">
+                <h2>Nuestros Departamentos</h2>
+                <div class="grid-departamentos">
+                    
+                    <a href="#fruteria" class="departamento-card">
+                        <img src="fruteria.jpg" alt="Frutería">
+                        <h3>FRUTERÍA</h3>
+                    </a>
+                    
+                    <a href="#" class="departamento-card"> 
+                        <img src="carniceria.jpg" alt="Carnicería">
+                        <h3>CARNICERÍA</h3>
+                    </a>
+                    <a href="#" class="departamento-card">
+                        <img src="semillas y secos.jpg" alt="Pollería">
+                        <h3>SEMILLAS Y SECOS</h3>
+                    </a>
+                    
+                </div>
+            </section>
+            
+        </div> 
+    </main>
+
+    <footer id="contacto">
+        <div class="container">
+            <h3>Contáctanos</h3>
+            <p>Teléfono: (+52)461 227 3606 | Email:  d.lcampo2021@gmail.com </p>
+            <p>&copy; 2025 D'LCAMPO. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="carrito-modal" class="modal">
+        <div class="modal-contenido">
+            <a href="#" class="modal-cerrar">×</a>
+            <h2>Tu Pedido</h2>
+            <ul id="lista-carrito">
+                </ul>
+            <h3 id="total-pedido">Total: $0.00</h3>
+            <hr>
+            <form id="formulario-pedido">
+                <h3>Completa tus datos para enviar</h3>
+                
+                <label for="cliente-nombre">Tu Nombre:</label>
+                <input type="text" id="cliente-nombre" placeholder="Nombre completo" required>
+                
+                <label for="cliente-telefono">Tu Teléfono (WhatsApp):</label>
+                <input type="tel" id="cliente-telefono" placeholder="Ej: 4611234567" required>
+                
+                <label for="cliente-direccion">Dirección de Entrega:</label>
+                <textarea id="cliente-direccion" placeholder="Calle, número, colonia, referencias" required></textarea>
+                
+                <hr> 
+                <div class="factura-toggle">
+                    <input type="checkbox" id="requiere-factura">
+                    <label for="requiere-factura">¿Requieres factura?</label>
+                </div>
+                <div id="datos-factura" class="campos-ocultos">
+                    <label for="cliente-rfc">Tu RFC:</label>
+                    <input type="text" id="cliente-rfc" placeholder="RFC con homoclave">
+                    
+                    <label fo r="cliente-razon-social">Razón Social (Nombre):</label>
+                    <input type="text" id="cliente-razon-social" placeholder="Nombre completo o Razón Social">
+                    
+                    <label for="cliente-uso-cfdi">Uso de CFDI:</label>
+                    <input type="text" id="cliente-uso-cfdi" placeholder="Ej: G03 - Gastos en general" value="G03 - Gastos en general">
+                </div>
+                <button type="button" id="enviar-whatsapp" class="btn-compra">
+                    Hacer Pedido por WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="opp.js"></script>
+</body>
+</html>
+

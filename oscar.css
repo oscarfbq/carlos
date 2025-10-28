@@ -1,0 +1,434 @@
+/* =================================================================
+   ESTILOS GENERALES Y FUENTE
+   ================================================================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =================================================================
+   HEADER (BARRA DE NAVEGACIÓN)
+   ================================================================= */
+header {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #4CAF50; /* Un color verde para la frutería */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+header nav a:hover {
+    color: #4CAF50;
+    border-bottom-color: #4CAF50;
+}
+
+a.carrito-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+a.carrito-btn:hover {
+    background-color: #45a049;
+    color: white; /* Asegura que el color no cambie en hover */
+    border-bottom: 2px solid transparent; /* Quita el borde de otros links */
+}
+
+/* =================================================================
+   LÓGICA DE NAVEGACIÓN (PÁGINAS)
+   ================================================================= */
+.pagina {
+    display: none; /* Oculta todas las páginas */
+    padding-top: 20px;
+}
+
+/* Muestra la página de departamentos por defecto (sin :target) */
+#departamentos {
+    display: block;
+}
+
+/* Muestra la página que esté en la URL (ej. #fruteria) */
+.pagina:target {
+    display: block;
+}
+
+/* Oculta las otras páginas cuando una es el :target */
+/* Si #fruteria es target, oculta #departamentos */
+#fruteria:target ~ #departamentos {
+    display: none;
+}
+/* Si #departamentos es target, oculta #fruteria */
+#departamentos:target ~ #fruteria {
+    display: none;
+}
+
+
+/* =================================================================
+   ESTILOS DE DEPARTAMENTOS
+   ================================================================= */
+.grid-departamentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.departamento-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.departamento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.departamento-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.departamento-card h3 {
+    text-align: center;
+    padding: 1.5rem;
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+/* =================================================================
+   ESTILOS DE PRODUCTOS (FRUTERÍA)
+   ================================================================= */
+.header-productos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-volver {
+    background-color: #6c757d;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: #5a6268;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.producto-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.producto-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain; /* 'contain' es mejor para productos */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.producto-card h3 {
+    font-size: 1.15rem;
+    margin: 0 0 10px 0;
+}
+
+.producto-card .precio {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.kilo-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn-kilo {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    width: 35px;
+    height: 35px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    border-radius: 50%;
+    line-height: 32px;
+}
+
+.kilo-input {
+    width: 60px;
+    text-align: center;
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 5px;
+    padding: 5px;
+}
+
+.kilo-label {
+    margin-left: 5px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #777;
+}
+
+.btn-compra {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn-compra:hover {
+    background-color: #0056b3;
+}
+
+.nota {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+}
+
+/* =================================================================
+   FOOTER (CONTACTO)
+   ================================================================= */
+footer {
+    background-color: #333;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+footer h3 {
+    margin-top: 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* =================================================================
+   MODAL DEL CARRITO
+   ================================================================= */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: none; /* Se activa con :target */
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.modal:target {
+    display: flex;
+}
+
+.modal-contenido {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.modal-cerrar:hover {
+    color: #333;
+}
+
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#lista-carrito li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#lista-carrito li:last-child {
+    border-bottom: none;
+}
+
+.btn-eliminar {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 25px;
+}
+
+#total-pedido {
+    text-align: right;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Formulario en el Modal */
+#formulario-pedido label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+#formulario-pedido input[type="text"],
+#formulario-pedido input[type="tel"],
+#formulario-pedido textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+#formulario-pedido textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.factura-toggle {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.factura-toggle label {
+    margin: 0 0 0 10px;
+    font-weight: normal;
+}
+
+.campos-ocultos {
+    display: none; /* JS lo mostrará si es necesario */
+}
+
+/* =================================================================
+   RESPONSIVE (PARA MÓVILES)
+   ================================================================= */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header nav {
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    header nav a {
+        margin-left: 0;
+    }
+
+    .modal-contenido {
+        width: 95%;
+        padding: 20px;
+    }
+}
