@@ -509,7 +509,7 @@ const baseDeDatos = {
         },
         { 
             nombre: 'Alpiste', 
-            precio: .00, 
+            precio: 29.00, 
             img: 'semillas y secos/alpiste.jpeg' 
         },
         { 
@@ -696,7 +696,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let carrito = {};
 
     // ¡¡¡CAMBIA ESTE NÚMERO POR EL TUYO!!!
-    const TU_NUMERO_DE_WHATSAPP = "524613267745"; 
+    const TU_NUMERO_DE_WHATSAPP = "524612273606"; 
 
     // Seleccionamos los elementos del DOM
     const listaCarrito = document.getElementById('lista-carrito');
@@ -894,6 +894,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Listener de Factura eliminado
 
 });
+
 
 
 
